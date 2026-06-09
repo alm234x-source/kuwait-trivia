@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --kuwait-green: #007a3d;
+  --kuwait-red: #ce1126;
+  --kuwait-gold: #c9a84c;
+  --kuwait-sand: #f5e6c8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+  background: #0a1628;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.flag-stripe {
+  background: linear-gradient(
+    to bottom,
+    #007a3d 33.33%,
+    #ffffff 33.33% 66.66%,
+    #ce1126 66.66%
+  );
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.gold-gradient {
+  background: linear-gradient(135deg, #c9a84c, #f0d080, #c9a84c);
+}
+
+.option-btn {
+  transition: all 0.2s ease;
+}
+
+.option-btn:hover:not(:disabled) {
+  transform: translateX(6px);
+}
+
+.option-btn:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.progress-bar-fill {
+  transition: width 0.5s ease;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-8px); }
+  40% { transform: translateX(8px); }
+  60% { transform: translateX(-6px); }
+  80% { transform: translateX(6px); }
+}
+
+.shake {
+  animation: shake 0.4s ease;
+}
+
+@keyframes correct-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(0, 166, 81, 0.7); }
+  70% { box-shadow: 0 0 0 12px rgba(0, 166, 81, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(0, 166, 81, 0); }
+}
+
+.correct-pulse {
+  animation: correct-pulse 0.5s ease;
+}
+
+.star-bg {
+  background-image: radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
